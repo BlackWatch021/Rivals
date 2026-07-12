@@ -1,0 +1,74 @@
+{
+  "barça|real madrid|hype": {
+    "monologue": "Ladies and gentlemen, welcome to the eternal war! On one side, Barça—the high-pressing, tiki-taka magicians spinning football into pure, hypnotic art! But wait! Here comes Real Madrid, the ruthless kings of Europe, hunting in the dark, ready to snatch your soul with a ninety-minute counter-attack! Barça wants to paint a masterpiece; Real Madrid just wants to burn the gallery down! It is beautiful arrogance versus pure, unadulterated power! You think you know drama? You know nothing until these two titans collide on the green theater of war! So guard your ankles and hold your breath, because when the whistle blows, history doesn't just get written—it gets bruised!",
+    "spoken": "Welcome to the eternal war! Barça is here to spin tiki-taka magic, but Real Madrid? They are the ruthless kings ready to burn the gallery down! Beautiful arrogance versus pure, unstoppable power! History is about to get bruised, and only one empire will stand. Who owns the throne? We are about to find out!",
+    "prediction": "A ninety-third minute breakaway goal will shatter the stadium and seal a chaotic 3-2 victory.",
+    "winner": "Real Madrid",
+    "passion": 99,
+    "slug": "barca-real-madrid",
+    "audio": "/presets/barca-real-madrid.mp3",
+    "a": "Barça",
+    "b": "Real Madrid",
+    "tone": "hype"
+  },
+  "ios|android|hype": {
+    "monologue": "LADIES AND GENTLEMEN, WELCOME TO THE ULTIMATE DIGITAL COLOSSEUM! In the blue corner, wearing the pristine, high-collared turtleneck of premium perfection, it’s iOS! The walled-garden titan where everything just works—assuming you sold a kidney to pay for it! But in the green corner, the absolute chaos-demon of customization, it’s Android! A wild-west powerhouse of freedom where you can tweak every pixel, yet your battery drains if you look at it wrong! iOS is a gold-plated cage; Android is a drag-racer held together by duct tape and hope! One treats you like a toddler in a luxury resort, the other like an engineer in a junkyard! It's the locked-down royalty versus the open-source rebellion! Two tech titans enter, but only one rules the global streets!",
+    "spoken": "Welcome to the ultimate digital colosseum! In one corner, iOS—the gold-plated cage where luxury meets zero freedom! In the other, Android—the wild-west chaos-demon of customization! iOS treats you like a toddler in a five-star resort, while Android is a drag-racer held together by duct tape and hope! It’s locked-down royalty versus open-source rebellion. Who takes the crown?",
+    "prediction": "Within three years, Android will fully bridge the ecosystem gap, rendering the 'green bubble' shame obsolete.",
+    "winner": "Android",
+    "passion": 95,
+    "slug": "ios-android",
+    "audio": "/presets/ios-android.mp3",
+    "a": "iOS",
+    "b": "Android",
+    "tone": "hype"
+  },
+  "cats|dogs|hype": {
+    "monologue": "Ladies and gentlemen, welcome to the ultimate colosseum of chaos! In the red corner, we have Dogs—the golden-hearted, slobber-dripping, hyperactive hype beasts of the animal kingdom! They possess the chaotic energy of a thousand falling tennis balls, but let’s be real: they’ll sell out their entire family tree for a single slice of processed cheese! And in the blue corner, the shadow-walking sovereigns of sass, the Cats! Armed with razor-sharp claws, absolute contempt for gravity, and a complete lack of respect for your property. They look at us like we’re staff, but let’s face it, they’re just fluffy little dictators who panic at the sight of a cucumber! You want loyalty, or you want royalty? Both sides are absolute icons, but today, one ruler takes the throne. Cats, pack your bags; Dogs are taking the crown!",
+    "spoken": "Welcome to the ultimate colosseum! In one corner, Dogs—hyperactive hype beasts who'd sell their souls for a slice of cheese! In the other, Cats—shadow-walking sovereigns of sass who panic at cucumbers! It's loyalty versus royalty! Both are absolute icons, but today, the pack takes the throne. Cats, pack your bags; Dogs are taking the crown!",
+    "prediction": "By midnight, every cat on the planet will be forced to fetch the newspaper while dogs claim the living room couch forever.",
+    "winner": "Dogs",
+    "passion": 99,
+    "slug": "cats-dogs",
+    "audio": "/presets/cats-dogs.mp3",
+    "a": "Cats",
+    "b": "Dogs",
+    "tone": "hype"
+  },
+  "messi|ronaldo|hype": {
+    "monologue": "Ladies and gentlemen, welcome to the eternal war of the gods! In the blue corner, we have Lionel Messi—a pocket-sized magician who bends the laws of physics like they are wet cardboard, making world-class defenders look like toddlers chasing a balloon! But in the red corner stands Cristiano Ronaldo—a genetically engineered goal-machine, a carbon-fiber titan who jumps so high he breathes oxygen reserved for commercial flights! One is pure divine grace, the other is relentless, screaming heavy metal ambition! You want to talk about greatness? One conquered the world with a magic wand, the other conquered it through sheer, unadulterated willpower and a ridiculous ab routine! It is the ultimate cosmic deadlock, but today, we break the scale. Bow down to the alien!",
+    "spoken": "Welcome to the eternal war! Lionel Messi, the pocket magician bending physics like cardboard, versus Cristiano Ronaldo, the carbon-fiber titan who jumps higher than commercial flights! One is divine grace, the other is screaming heavy metal ambition. It is the ultimate cosmic deadlock, but today, we break the scale. Bow down to the alien!",
+    "prediction": "Messi will hoist one final, glittering trophy in a sunset league while Ronaldo breaks the internet by scoring a bicycle kick at age fifty.",
+    "winner": "Messi",
+    "passion": 99,
+    "slug": "messi-ronaldo",
+    "audio": "/presets/messi-ronaldo.mp3",
+    "a": "Messi",
+    "b": "Ronaldo",
+    "tone": "hype"
+  },
+  "coffee|tea|hype": {
+    "monologue": "LADIES AND GENTLEMEN, WELCOME TO THE ULTIMATE LIQUID SHOWDOWN! In the blue corner, we have TEA—the ancient, silent assassin, masquerading as a leaf but packing a zen-infused punch that has ruled empires for millennia! But in the red corner... oh, baby! It’s COFFEE! The high-voltage, heart-pounding, anxiety-inducing liquid lightning bolt that drags your lazy bones out of bed every single morning! You think Tea is too sophisticated? Please, it’s just hot leaf water for people who are afraid of productivity! But Coffee? You’re one sip away from a panic attack at a desk job! One is a sleepy hug, the other is a slap to the cerebral cortex! Who survives the grind?! Tonight, the bean claims the throne!",
+    "spoken": "It’s the ultimate liquid showdown! TEA, the ancient, zen-infused silent assassin, versus COFFEE, the high-voltage, heart-pounding liquid lightning bolt! Tea is just hot leaf water for the sleepy, while Coffee is a beautiful, chaotic slap to the brain. Tonight, the grind is real, but only one cup rules the world. Wake up and smell the victor!",
+    "prediction": "By 2030, decaf will be outlawed and espresso shots will be pumped directly into the global water supply.",
+    "winner": "Coffee",
+    "passion": 95,
+    "slug": "coffee-tea",
+    "audio": "/presets/coffee-tea.mp3",
+    "a": "Coffee",
+    "b": "Tea",
+    "tone": "hype"
+  },
+  "marvel|dc|hype": {
+    "monologue": "Ladies and gentlemen, welcome to the ultimate clash of cosmic titans! In the red corner, we have Marvel, the box-office juggernaut that turned B-list heroes into a multi-billion-dollar cinematic empire, though lately, they are drowning in their own multiverse of madness! And in the blue corner, DC, the pantheon of literal gods, boasting the greatest trinity in fiction, yet they cannot seem to reboot their own universe without tripping over a brand-new timeline! Marvel gives us quippy science nerds in spandex; DC gives us brooding billionaires who need therapy. It is the blockbuster conveyor belt versus the operatic tragedy of perpetual rebrands! But when the dust clears, only one titan can hold the crown of the modern mythology. Can I get a drumroll? Class is dismissed, because the gods have spoken!",
+    "spoken": "Welcome to the ultimate clash of titans! Marvel is the box-office juggernaut drowning in its own multiverse of madness, while DC has the gods but cannot stop hitting the reboot button! It is quippy science nerds versus brooding billionaires who need serious therapy. Only one can rule this modern mythology. Class is dismissed, because the gods are taking over!",
+    "prediction": "The upcoming cinematic slate will prove that audiences are tired of multiverses and ready for a single, legendary epic.",
+    "winner": "DC",
+    "passion": 95,
+    "slug": "marvel-dc",
+    "audio": "/presets/marvel-dc.mp3",
+    "a": "Marvel",
+    "b": "DC",
+    "tone": "hype"
+  }
+}
