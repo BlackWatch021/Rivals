@@ -8,6 +8,11 @@ export type RivalPayload = {
   prediction: string;
   winner: string;
   passion: number;
+  // Scouting cards: short bullet phrases for each side.
+  powersA: string[];
+  weaknessesA: string[];
+  powersB: string[];
+  weaknessesB: string[];
 };
 
 export type GenerateResult =
@@ -38,14 +43,19 @@ Produce TWO versions of the take:
 - "monologue": the full written version, 90-140 words, punchy sentences, ending on a mic-drop line. This is shown on screen.
 - "spoken": a SHORT spoken version of the same take, 45-70 words MAX, distilled to the hottest, most quotable lines. It will be read aloud by a text-to-speech voice, so it must sound great spoken and stay tight.
 
+Also scout each side like a coach:
+- "powersA"/"powersB": 3 punchy strengths (2-5 words each) for "${a}" and "${b}" respectively.
+- "weaknessesA"/"weaknessesB": 3 punchy weaknesses (2-5 words each), witty but fair.
+
 Rules:
 - Reference BOTH "${a}" and "${b}" specifically.
 - "winner" must be exactly one of the two names, spelled as given.
 - "prediction" is one bold, quotable sentence.
 - "passion" is an integer 0-100 rating how heated this rivalry is.
+- Every powers/weaknesses entry is a SHORT phrase, not a sentence.
 
 Return ONLY JSON matching this shape (no markdown, no backticks):
-{"monologue": string, "spoken": string, "prediction": string, "winner": string, "passion": number}`;
+{"monologue": string, "spoken": string, "prediction": string, "winner": string, "passion": number, "powersA": string[], "weaknessesA": string[], "powersB": string[], "weaknessesB": string[]}`;
 
   const requestBody = JSON.stringify({
     contents: [{ role: "user", parts: [{ text: prompt }] }],
@@ -138,8 +148,21 @@ function parsePayload(raw: string, a: string, b: string): RivalPayload | null {
       prediction: String(obj.prediction ?? "").trim(),
       winner,
       passion,
+      powersA: toBullets(obj.powersA),
+      weaknessesA: toBullets(obj.weaknessesA),
+      powersB: toBullets(obj.powersB),
+      weaknessesB: toBullets(obj.weaknessesB),
     };
   } catch {
     return null;
   }
+}
+
+// Normalize a model field into up to 3 short, clean bullet strings.
+function toBullets(v: unknown): string[] {
+  if (!Array.isArray(v)) return [];
+  return v
+    .map((x) => String(x ?? "").trim())
+    .filter(Boolean)
+    .slice(0, 3);
 }

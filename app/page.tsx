@@ -9,6 +9,10 @@ type RivalResult = {
   prediction: string;
   winner: string;
   passion: number;
+  powersA: string[];
+  weaknessesA: string[];
+  powersB: string[];
+  weaknessesB: string[];
 };
 
 type PresetEntry = RivalResult & { audio: string; a: string; b: string };
@@ -38,6 +42,9 @@ export default function Home() {
   const [cachedAudio, setCachedAudio] = useState<string | null>(null);
   const [fromCache, setFromCache] = useState(false);
   const [modal, setModal] = useState<null | "voice" | "gemini">(null);
+  // The two names that produced the current result (so cards stay correct
+  // even if the inputs are edited afterward).
+  const [names, setNames] = useState<{ a: string; b: string }>({ a: "", b: "" });
 
   const manifestRef = useRef<Record<string, PresetEntry>>({});
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -72,6 +79,7 @@ export default function Home() {
     resetAudio();
     setCachedAudio(null);
     setFromCache(false);
+    setNames({ a: nameA, b: nameB });
 
     // Pre-built preset? Serve the cached text + audio instantly, zero API cost.
     const hit = manifestRef.current[keyOf(nameA, nameB, tone)];
@@ -255,6 +263,23 @@ export default function Home() {
             {result.monologue}
           </p>
 
+          {(result.powersA.length > 0 || result.powersB.length > 0) && (
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <ScoutCard
+                name={names.a}
+                accent="border-orange-500/40"
+                powers={result.powersA}
+                weaknesses={result.weaknessesA}
+              />
+              <ScoutCard
+                name={names.b}
+                accent="border-rose-500/40"
+                powers={result.powersB}
+                weaknesses={result.weaknessesB}
+              />
+            </div>
+          )}
+
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             <div className="rounded-2xl border border-zinc-700/60 bg-zinc-800/40 p-4">
               <p className="text-xs font-semibold uppercase tracking-widest text-orange-300/70">
@@ -356,6 +381,52 @@ function RivalInput({
         className="mt-1 w-full bg-transparent text-xl font-bold text-white placeholder:text-zinc-500 focus:outline-none"
       />
     </label>
+  );
+}
+
+function ScoutCard({
+  name,
+  accent,
+  powers,
+  weaknesses,
+}: {
+  name: string;
+  accent: string;
+  powers: string[];
+  weaknesses: string[];
+}) {
+  return (
+    <div className={`rounded-2xl border ${accent} bg-zinc-800/40 p-4`}>
+      <p className="truncate text-lg font-black text-fire">{name}</p>
+      {powers.length > 0 && (
+        <div className="mt-3">
+          <p className="text-[11px] font-semibold uppercase tracking-widest text-emerald-400/80">
+            💪 Powers
+          </p>
+          <ul className="mt-1 space-y-1">
+            {powers.map((p, i) => (
+              <li key={i} className="text-sm text-zinc-200">
+                <span className="text-emerald-400">▸</span> {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {weaknesses.length > 0 && (
+        <div className="mt-3">
+          <p className="text-[11px] font-semibold uppercase tracking-widest text-rose-400/80">
+            ⚠️ Weaknesses
+          </p>
+          <ul className="mt-1 space-y-1">
+            {weaknesses.map((w, i) => (
+              <li key={i} className="text-sm text-zinc-200">
+                <span className="text-rose-400">▸</span> {w}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   );
 }
 
