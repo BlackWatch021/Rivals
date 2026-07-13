@@ -33,8 +33,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# internal challenge brief (not for the public repo)
+# internal challenge brief + submission draft (not for the public repo)
 memory.md
+SUBMISSION.md
 
 # Claude Code local settings
 .claude/
